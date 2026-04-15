@@ -425,4 +425,291 @@ img {
 
 .mystic-card {
   background: linear-gradient(180deg, rgba(36, 19, 76, 0.88) 0%, rgba(22, 12, 48, 0.92) 100%);
-  border: 1px solid rgba(255, 255, 255,
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+}
+
+.icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.product-card h3 {
+  color: var(--gold-bright);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.pricing-layout {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.price-card {
+  background: var(--panel);
+  border: 1px solid var(--border-soft);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.price-card.featured {
+  border-color: rgba(240, 196, 107, 0.44);
+  box-shadow:
+    0 0 0 1px rgba(240, 196, 107, 0.18),
+    0 0 24px rgba(240, 196, 107, 0.12);
+}
+
+.price {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold-bright);
+  margin-bottom: 10px;
+}
+
+.price-card h3 {
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.price-card p {
+  color: var(--text-soft);
+}
+
+.pricing-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-image {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+.booking-box {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(38, 20, 79, 0.86) 0%, rgba(18, 11, 45, 0.92) 100%);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+.booking-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.contact-section {
+  background: linear-gradient(135deg, #100826 0%, #1f114c 100%);
+  color: var(--text-main);
+  padding: 88px 0;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.22);
+}
+
+.contact-item {
+  margin-bottom: 24px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-item span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.contact-item a {
+  color: var(--text-main);
+  font-size: 1.18rem;
+  font-weight: 800;
+  word-break: break-word;
+}
+
+.contact-item a:hover {
+  color: var(--gold-bright);
+}
+
+.site-footer {
+  background: #0a0618;
+  border-top: 1px solid var(--border-soft);
+}
+
+.footer-top,
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-top {
+  padding: 28px 0 18px;
+}
+
+.footer-top h3 {
+  color: var(--gold-bright);
+  margin-bottom: 6px;
+}
+
+.footer-top p,
+.footer-bottom p {
+  color: var(--text-soft);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-links a {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: var(--gold-bright);
+}
+
+.footer-bottom {
+  padding: 18px 0 28px;
+  border-top: 1px solid var(--border-soft);
+}
+
+@media (max-width: 1100px) {
+  .header-inner,
+  .hero-intro-inner,
+  .two-column,
+  .pricing-layout,
+  .booking-box,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    display: grid;
+    align-items: center;
+    padding: 18px 0;
+  }
+
+  .product-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slide-text h2 {
+    font-size: 3rem;
+  }
+
+  .slide-content,
+  .hero-slider {
+    min-height: 74vh;
+  }
+}
+
+@media (max-width: 680px) {
+  .brand {
+    gap: 12px;
+  }
+
+  .logo {
+    height: 68px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.35rem;
+  }
+
+  .brand-text p {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+  }
+
+  .nav {
+    gap: 14px;
+  }
+
+  .nav-cta {
+    padding: 10px 14px;
+  }
+
+  .slide-text {
+    padding: 72px 0 112px;
+  }
+
+  .slide-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .slide-text p {
+    font-size: 1rem;
+  }
+
+  .product-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section h2,
+  .contact-section h2,
+  .hero-intro h2 {
+    font-size: 2.1rem;
+  }
+
+  .slider-controls {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .slider-btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .slider-dots {
+    bottom: 24px;
+  }
+
+  .booking-box {
+    padding: 28px;
+  }
+}
